@@ -1,0 +1,9 @@
+Package: task-cli
+Version: 1.0
+Section: utils
+Priority: optional
+Architecture: all
+Essential: no
+Depends: nodejs (>= 12)
+Maintainer: Mauro <niev.mauro@gmail.com>
+Description: Task CLI es una herramienta simple para gestionar tareas desde la terminal.
