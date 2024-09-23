@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Obtener el directorio home del usuario
+USER_HOME=$(getent passwd $SUDO_USER | cut -d: -f6)
+
+# Crear la carpeta en ~/.config/task-cli si no existe
+if [ ! -d "$USER_HOME/.config/task-cli" ]; then
+  mkdir -p "$USER_HOME/.config/task-cli"
+  echo "Carpeta ~/.config/task-cli creada."
+fi
+
+# Asegurarse de que el propietario sea el usuario y no root
+chown -R $SUDO_USER:$SUDO_USER "$USER_HOME/.config/task-cli"
