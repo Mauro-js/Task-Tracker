@@ -9,5 +9,8 @@ if [ ! -d "$USER_HOME/.config/task-cli" ]; then
   echo "Carpeta ~/.config/task-cli creada."
 fi
 
+# Copiar el archivo .js a ~/.config/myapp/
+cp /usr/share/task-cli/index.js "$USER_HOME/.config/task-cli/"
+
 # Asegurarse de que el propietario sea el usuario y no root
 chown -R $SUDO_USER:$SUDO_USER "$USER_HOME/.config/task-cli"
