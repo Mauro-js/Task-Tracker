@@ -1,0 +1,27 @@
+#!/bin/bash
+
+case $1 in
+"add")
+  node ~/.config/task-cli/index.js add $2
+  ;;
+
+"update")
+  node ~/.config/task-cli/index.js update $2 $3
+  ;;
+
+"delete")
+  node ~/.config/task-cli/index.js delete $2
+  ;;
+
+"list")
+  node ~/.config/task-cli/index.js list $2
+  ;;
+
+"mark-in-progress")
+  node ~/.config/task-cli/index.js mark-in-progress $2
+  ;;
+
+"mark-done")
+  node ~/.config/task-cli/index.js mark-done $2
+  ;;
+esac
